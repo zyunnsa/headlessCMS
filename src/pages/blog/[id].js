@@ -14,7 +14,8 @@ import { client } from "../../libs/client";
 export default function BlogId({ blog }) {
   return (
     <main>
-      <h1>{blog.title}</h1>
+      <h1 class="blog_title">{blog.title}</h1>
+      <p class="thumbnail"><img src={blog.thumbnail.url}/></p>
       <p>{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY-MM-DD')}</p>
       <div
         dangerouslySetInnerHTML={{
